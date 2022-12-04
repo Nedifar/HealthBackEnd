@@ -7,7 +7,7 @@ using WebApplication2.Models;
 var builder = WebApplication.CreateBuilder(new WebApplicationOptions { WebRootPath = "images" });
     
 
-string con = @"Server=192.168.147.72\sqlexpress; User id=sa; pwd=ArbiDOL2+0;DataBase=BookingSystemBase;";
+string con = @"Server=localhost; Trusted_Connection=true;DataBase=BookingSystemBase;";
 
 builder.Services.AddDbContext<context>(options =>
 options.UseSqlServer(con).UseLazyLoadingProxies());
